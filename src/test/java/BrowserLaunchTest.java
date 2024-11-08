@@ -12,10 +12,8 @@ public class BrowserLaunchTest {
     public void setUp() {
         // Set up the ChromeDriver path (adjust for your operating system)
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-
         // Initialize the WebDriver
         driver = new ChromeDriver();
-
         // Maximize browser window
         driver.manage().window().maximize();
     }
@@ -25,7 +23,6 @@ public class BrowserLaunchTest {
         // Open a website
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         Thread.sleep(5000);
-
         // Optionally, you could verify the title of the page
         String pageTitle = driver.getTitle();
         System.out.println("Page title is: " + pageTitle);
